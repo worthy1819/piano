@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- title  -->
+    <title>Play Piano</title>
+    <link rel="website icon" type="png" href="keyboard.png">
+    <!-- style  -->
+    <style>
+        .piano-keys .key.hide span{
+            display: none;
+        }
+    </style>
+    <!-- javascript  -->
+    <script src="script.js" defer></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-[#E3F2FD] px-3">
+    <div class="wrapper bg-[#141414] rounded-2xl py-9 px-10 md:rotate-0 rotate-90">
+        <header class="text-[#b2b2b2] flex items-center justify-between">
+            <h2 class="text-2xl">PIANO</h2>
+            <div class="column volume-slider flex items-center">
+                <span class="font-medium me-4 text-lg">Volume</span><input type="range" min="0" max="1" value="0.5" step="any" class="accent-[#fff]">
+            </div>
+            <div class="column keys-checkbox flex items-center">
+                <span class="font-medium me-4 text-lg">Show Keys</span><input type="checkbox" checked class="appearance-none w-16 h-8 cursor-pointer rounded-3xl bg-[#4b4b4b] relative before:[''] before:h-5 before:w-5 before:top-1/2 before:left-1 before:rounded-3xl before:absolute before:bg-[#8c8c8c] before:-translate-y-1/2 before:transition-all before:delay-300 before:ease-linear outline-none checked:before:left-9 checked:before:bg-[#fff]">
+            </div>
+        </header>
+        <ul class="piano-keys flex mt-10 justify-center">
+            <li class="key white select-none relative cursor-pointer border-black text-[#a2a2a2] uppercase w-16 h-56 rounded-lg bg-gradient-to-b from-[#fff] from-95% to-[#eee] to-5% active:bg-gradient-to-b active:from-[#fff] active:from-0% active:to-[#eee] active:to-100% active:shadow-inner active:shadow-black" data-key="a"><span class="absolute bottom-5 w-full text-lg text-center">a</span></li>
+            <li class="key black select-none relative cursor-pointer text-[#a2a2a2] uppercase w-11 h-36 rounded-r-md rounded-b-md bg-gradient-to-b from-[#333] to-[#000] -mx-5 z-10 active:bg-gradient-to-b active:from-[#000] active:to-[#434343] active:shadow-inner active:shadow-black" data-key="w"><span class="absolute bottom-5 w-full text-lg text-center">w</span></li>
+            <li class="key white select-none relative cursor-pointer border-black text-[#a2a2a2] uppercase w-16 h-56 rounded-lg bg-gradient-to-b from-[#fff] from-95% to-[#eee] to-5% active:bg-gradient-to-b active:from-[#fff] active:from-0% active:to-[#eee] active:to-100% active:shadow-inner active:shadow-black" data-key="s"><span class="absolute bottom-5 w-full text-lg text-center">s</span></li>
+            <li class="key black select-none relative cursor-pointer text-[#a2a2a2] uppercase w-11 h-36 rounded-r-md rounded-b-md bg-gradient-to-b from-[#333] to-[#000] -mx-5 z-10 active:bg-gradient-to-b active:from-[#000] active:to-[#434343] active:shadow-inner active:shadow-black" data-key="e"><span class="absolute bottom-5 w-full text-lg text-center">e</span></li>
+            <li class="key white select-none relative cursor-pointer border-r-4 border-black text-[#a2a2a2] uppercase w-16 h-56 rounded-lg bg-gradient-to-b from-[#fff] from-95% to-[#eee] to-5% active:bg-gradient-to-b active:from-[#fff] active:from-0% active:to-[#eee] active:to-100% active:shadow-inner active:shadow-black" data-key="d"><span class="absolute bottom-5 w-full text-lg text-center">d</span></li>
+            <li class="key white select-none relative cursor-pointer border-black text-[#a2a2a2] uppercase w-16 h-56 rounded-lg bg-gradient-to-b from-[#fff] from-95% to-[#eee] to-5% active:bg-gradient-to-b active:from-[#fff] active:from-0% active:to-[#eee] active:to-100% active:shadow-inner active:shadow-black" data-key="f"><span class="absolute bottom-5 w-full text-lg text-center">f</span></li>
+            <li class="key black select-none relative cursor-pointer text-[#a2a2a2] uppercase w-11 h-36 rounded-r-md rounded-b-md bg-gradient-to-b from-[#333] to-[#000] -mx-5 z-10 active:bg-gradient-to-b active:from-[#000] active:to-[#434343] active:shadow-inner active:shadow-black" data-key="t"><span class="absolute bottom-5 w-full text-lg text-center">t</span></li>
+            <li class="key white select-none relative border-black text-[#a2a2a2] uppercase w-16 h-56 rounded-lg bg-gradient-to-b from-[#fff] from-95% to-[#eee] to-5% active:bg-gradient-to-b active:from-[#fff] active:from-0% active:to-[#eee] active:to-100% active:shadow-inner active:shadow-black" data-key="g"><span class="absolute bottom-5 w-full text-lg text-center">g</span></li>
+            <li class="key black select-none relative cursor-pointer text-[#a2a2a2] uppercase w-11 h-36 rounded-r-md rounded-b-md bg-gradient-to-b from-[#333] to-[#000] -mx-5 z-10 active:bg-gradient-to-b active:from-[#000] active:to-[#434343] active:shadow-inner active:shadow-black" data-key="y"><span class="absolute bottom-5 w-full text-lg text-center">y</span></li>
+            <li class="key white select-none relative cursor-pointer border-black text-[#a2a2a2] uppercase w-16 h-56 rounded-lg bg-gradient-to-b from-[#fff] from-95% to-[#eee] to-5% active:bg-gradient-to-b active:from-[#fff] active:from-0% active:to-[#eee] active:to-100% active:shadow-inner active:shadow-black" data-key="h"><span class="absolute bottom-5 w-full text-lg text-center">h</span></li>
+            <li class="key black select-none relative cursor-pointer text-[#a2a2a2] uppercase w-11 h-36 rounded-r-md rounded-b-md bg-gradient-to-b from-[#333] to-[#000] -mx-5 z-10 active:bg-gradient-to-b active:from-[#000] active:to-[#434343] active:shadow-inner active:shadow-black" data-key="u"><span class="absolute bottom-5 w-full text-lg text-center">u</span></li>
+            <li class="key white select-none relative cursor-pointer border-r-4 border-black text-[#a2a2a2] uppercase w-16 h-56 rounded-lg bg-gradient-to-b from-[#fff] from-95% to-[#eee] to-5% active:bg-gradient-to-b active:from-[#fff] active:from-0% active:to-[#eee] active:to-100% active:shadow-inner active:shadow-black" data-key="j"><span class="absolute bottom-5 w-full text-lg text-center">j</span></li>
+            <li class="key white select-none relative cursor-pointer border-black text-[#a2a2a2] uppercase w-16 h-56 rounded-lg bg-gradient-to-b from-[#fff] from-95% to-[#eee] to-5% active:bg-gradient-to-b active:from-[#fff] active:from-0% active:to-[#eee] active:to-100% active:shadow-inner active:shadow-black" data-key="k"><span class="absolute bottom-5 w-full text-lg text-center">k</span></li>
+            <li class="key black select-none relative cursor-pointer text-[#a2a2a2] uppercase w-11 h-36 rounded-r-md rounded-b-md bg-gradient-to-b from-[#333] to-[#000] -mx-5 z-10 active:bg-gradient-to-b active:from-[#000] active:to-[#434343] active:shadow-inner active:shadow-black" data-key="o"><span class="absolute bottom-5 w-full text-lg text-center">o</span></li>
+            <li class="key white select-none relative cursor-pointer border-black text-[#a2a2a2] uppercase w-16 h-56 rounded-lg bg-gradient-to-b from-[#fff] from-95% to-[#eee] to-5% active:bg-gradient-to-b active:from-[#fff] active:from-0% active:to-[#eee] active:to-100% active:shadow-inner active:shadow-black" data-key="l"><span class="absolute bottom-5 w-full text-lg text-center">l</span></li>
+            <li class="key black select-none relative cursor-pointer text-[#a2a2a2] uppercase w-11 h-36 rounded-r-md rounded-b-md bg-gradient-to-b from-[#333] to-[#000] -mx-5 z-10 active:bg-gradient-to-b active:from-[#000] active:to-[#434343] active:shadow-inner active:shadow-black" data-key="p"><span class="absolute bottom-5 w-full text-lg text-center">p</span></li>
+            <li class="key white select-none relative cursor-pointer border-black text-[#a2a2a2] uppercase w-16 h-56 rounded-lg bg-gradient-to-b from-[#fff] from-95% to-[#eee] to-5% active:bg-gradient-to-b active:from-[#fff] active:from-0% active:to-[#eee] active:to-100% active:shadow-inner active:shadow-black" data-key=";"><span class="absolute bottom-5 w-full text-lg text-center">;</span></li>
+        </ul>
+    </div>
+</body>
+</html>
